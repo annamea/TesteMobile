@@ -1,0 +1,103 @@
+/* Cores */
+:root {
+    --senai-red: #DA251C;
+    --senai-pink-bg: rgba(218, 37, 28, 0.18); 
+    --light-gray:rgb(255, 255, 255); 
+    --schedule-card-bg: rgba(218, 37, 28, 0.18); 
+    --current-card-bg: rgba(218, 37, 28, 0.18); 
+}
+
+/* Style*/
+body {
+    background-color: var(--light-gray);
+    margin: 0;}
+
+/* Ajustes para o Mobile ser como um app */
+.mobile-container {
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0; 
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Container Centralizado*/
+.container{
+    padding: 3rem;
+    background-color: none;
+    border-radius: 0.5rem;
+    max-width: 90%; 
+}
+
+
+/* Header e Footer */
+.navbar-top, .navbar-bottom {
+    background-color: var(--senai-red) !important;
+    height: 60px; 
+}
+
+.text-senai {
+    color: var(--senai-red) !important;
+}
+
+/* Confirmar Reserva */
+.btn-senai {
+    background-color: var(--senai-red) !important;
+    border-color: var(--senai-red) !important;
+    color: white !important;
+}
+
+.btn-senai:hover {
+    background-color: #A32525 !important; 
+    border-color: #A32525 !important;
+}
+
+
+/* Card de Horários */
+.schedule-card {
+    background-color: var(--schedule-card-bg);
+    border-radius: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border-right: 5px solid var(--senai-red); 
+}
+
+/* Scroow dos Horários */
+.time-slots-wrapper {
+    max-height: 250px; 
+    overflow-y: auto;
+    padding-right: 15px; 
+}
+
+/* Botoes dos dias */
+.btn-senai-outline {
+    border: 1px solid var(--senai-red);
+    color: var(--senai-red);
+    background-color: transparent;
+    border-radius: 8px;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+}
+
+.btn-senai-outline:hover, .btn-senai-outline.active {
+    background-color: var(--senai-red);
+    color: white;
+}
+
+/* Card de Reserva Atual */
+.current-reservation-card {
+    background-color: var(--current-card-bg);
+    border-radius: 15px;
+    border-left: 5px solid var(--senai-red); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Media Para Desktop */
+@media (min-width: 760px) {
+    .container {
+        width: 600px;  
+        height: 700px; 
+        max-width: none; 
+        max-height: none; 
+    }
+}
